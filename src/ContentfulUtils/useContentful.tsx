@@ -7,6 +7,7 @@ interface Blog {
         date: string
         slug: string
         markdownContent: string
+        category: string[]
     }
 }
 
