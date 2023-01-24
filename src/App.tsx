@@ -1,9 +1,19 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import { Navbar } from "./Navbar"
+import { About, AllBlogs, SingleBlog } from "./Pages"
+
 function App() {
 
   return (
-  <>
-    <p className="text-blue-400">hello</p>
-  </>
+    <Router>
+
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<About />} />
+        <Route path="blog" element={<AllBlogs />} />
+        <Route path="/blog/:slug" element={<SingleBlog />} />
+      </Routes>
+    </Router>
   )
 }
 
