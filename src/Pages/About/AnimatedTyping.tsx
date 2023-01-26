@@ -1,34 +1,23 @@
 import { useState, useEffect } from "react";
 
 export const AnimatedTyping = () => {
-  const [text, setText] = useState('');
-  const [fullTextIndex, setFullTextIndex] = useState(0);
-  const fullTextArray = ['welcome!'];
-
-    const handleFullTextIndex = () => {
-    if (fullTextIndex + 1 >= fullTextArray.length) {
-      setFullTextIndex(0);
-    } else {
-      setFullTextIndex(fullTextIndex + 1);
-    }
-    setText("");
-  }
+  const text = "Hi. I'm Jacob Danner."
+  const [displayText, setDisplayText] = useState("");
+  const [index, setIndex] = useState(0);
 
   useEffect(() => {
-    // intervalId is only needed for the cleanup that happens on component unmount
-    let intervalId: null | number = null;
-    intervalId = setInterval(() => {
-      let curWord = fullTextArray[fullTextIndex]
-      setText(curWord.substring(0, text.length + 1));
-      if (text === curWord) {
-        clearInterval(intervalId!);
-        setTimeout(handleFullTextIndex, 1000);
+    let intervalId = setInterval(() => {
+      if (index < text.length) {
+        setDisplayText(prevDisplayText => prevDisplayText + text[index]);
+        setIndex(index + 1);
+      } else {
+        clearInterval(intervalId);
       }
-    }, 50);
-    return () => clearInterval(intervalId!);
-  }, [text, fullTextIndex]);
+    }, 70);
+    return () => clearInterval(intervalId);
+  }, [index, text]);
 
   return (
-    <p>I'm {text}</p>
+    <p className="align-middle">{displayText}</p>
   );
 };
