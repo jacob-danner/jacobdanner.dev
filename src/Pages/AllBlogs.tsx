@@ -26,8 +26,8 @@ const AllBlogs: React.FC = () => {
 
   return (
     <>
-      <div id="blogs-wrapper" className="w-9/12 mx-auto p-4 bg-neutral-100 border border-neutral-300 shadow-xl">
-        <select className="border border-sky-700 right-0"
+      <div id="main-wrapper" className="w-9/12 h-full mx-auto mb-4 p-4 bg-neutral-100 border border-neutral-300 shadow-xl flex-col">
+        <select className="border border-sky-700"
           onChange={e => setFilterWord(e.currentTarget.value)}>
           {CATEGORIES.map((cat: string, index: number) =>( 
             <option key={index} value={cat}>
@@ -36,9 +36,12 @@ const AllBlogs: React.FC = () => {
           ))}
         </select>
 
-        {filtered!.map(el => {
-          return <BlogCard title={el.fields.title} date={el.fields.date} slug={el.fields.slug} key={el.fields.slug} />
-        })}
+        <div id="blog-wrapper" className="grid grid-cols-3 gap-3">
+
+          {filtered!.map(el => {
+            return <BlogCard title={el.fields.title} date={el.fields.date} slug={el.fields.slug} key={el.fields.slug} />
+          })}
+        </div>
 
       </div>
     </>
