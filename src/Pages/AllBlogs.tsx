@@ -26,17 +26,21 @@ const AllBlogs: React.FC = () => {
 
   return (
     <>
-      <div id="main-wrapper" className="w-9/12 h-full mx-auto mb-4 p-4 bg-neutral-100 border border-neutral-300 shadow-xl flex-col">
-        <select className="border border-sky-700"
-          onChange={e => setFilterWord(e.currentTarget.value)}>
-          {CATEGORIES.map((cat: string, index: number) =>( 
-            <option key={index} value={cat}>
-            {cat}
-          </option>
-          ))}
-        </select>
+      <div id="main-wrapper" className="mt-20 mb-10 w-9/12 mx-auto p-4 bg-neutral-100 shadow-xl flex flex-col items-center rounded-md">
 
-        <div id="blog-wrapper" className="grid grid-cols-3 gap-3">
+
+        <div id="blog-wrapper" className="flex-col justify-center items-center w-full lg:w-5/12 md:w-2/3 sm:w-full mb-10">
+
+          <div id="select-wrapper" className="flex justify-end">
+            <select className="bg-white rounded-md text-center text-sm h-8 w-1/2 shadow-xl focus:ring ring-sky-700 outline-none "
+              onChange={e => setFilterWord(e.currentTarget.value)}>
+              {CATEGORIES.map((cat: string, index: number) =>( 
+                <option key={index} value={cat}>
+                {cat}
+              </option>
+              ))}
+            </select>
+          </div>
 
           {filtered!.map(el => {
             return <BlogCard title={el.fields.title} date={el.fields.date} slug={el.fields.slug} key={el.fields.slug} />
