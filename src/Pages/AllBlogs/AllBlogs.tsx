@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { useBlogs } from "../ContentfulUtils/useContentful";
-import { BlogCard } from "./AllBlogs/BlogCard";
+import { useBlogs } from "../../ContentfulUtils/useContentful";
+import { BlogCard } from "./BlogCard";
 
 const CATEGORIES = [
   'All', 'Machine Learning', 'Python', 'Natural Language', 'Other'

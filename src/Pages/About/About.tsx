@@ -1,4 +1,4 @@
-import { AnimatedTyping } from "./About/AnimatedTyping"
+import { AnimatedTyping } from "./AnimatedTyping"
 import { Link } from "react-router-dom"
 
 export const About = () => {

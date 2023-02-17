@@ -1,5 +1,5 @@
-import { About } from "./About";
-import { AllBlogs } from "./AllBlogs";
-import { SingleBlog } from "./SingleBlog";
+import { About } from "./About/About";
+import { AllBlogs } from "./AllBlogs/AllBlogs";
+import { SingleBlog } from "./SingleBlog/SingleBlog";
 
 export { About, AllBlogs, SingleBlog }
