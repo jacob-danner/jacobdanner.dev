@@ -26,7 +26,7 @@ const AllBlogs: React.FC = () => {
 
   return (
     <>
-      <div id="main-wrapper" className="mt-20 mb-10 w-9/12 mx-auto p-4 bg-neutral-100 shadow-xl flex flex-col items-center rounded-md">
+      <div id="main-wrapper" className="mt-20 mb-10 w-9/12 mx-auto p-4 bg-neutral-100 flex flex-col items-center rounded-md h-full overflow-auto shadow-2xl">
 
 
         <div id="blog-wrapper" className="flex-col justify-center items-center w-full lg:w-5/12 md:w-2/3 sm:w-full mb-10">
