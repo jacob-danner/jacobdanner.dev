@@ -5,11 +5,11 @@ export const Navbar = () => {
       <nav className="flex justify-end w-full h-12 bg-neutral-100 border border-neutral-300 shadow-xl absolute">
         <div className="flex w-full lg:w-5/12 md:w-2/3 sm:w-full  justify-center items-center h-full">
 
-          <ul className="text-sm flex w-full justify-around items-center h-full underline text-sky-700">
-            <li> <Link to={"/blog"}>Blog</Link> </li>
-            <li> <Link to={""}>Projects</Link></li>
-            <li> <Link to={""}>Resume</Link></li>
-            <li> <Link to={"/contact"}>Contact</Link> </li>
+          <ul className="text-sm flex w-full justify-around items-center h-full text-neutral-700 ">
+            <li className="hover:text-sky-700"> <Link to={"/blog"}>BLOG</Link> </li>
+            <li className="hover:text-sky-700"> <Link to={""}>PROJECTS</Link></li>
+            <li className="hover:text-sky-700"> <a href="https://drive.google.com/file/d/181Xph6HUwYbmmx3HFoFhDp-4xgv0emEQ/view?usp=sharing">RESUME</a></li>
+            <li className="hover:text-sky-700"> <Link to={"/contact"}>CONTACT</Link> </li>
           </ul>
 
           <div id="logo-wrapper" className="flex justify-center w-1/4">

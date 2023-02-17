@@ -18,6 +18,6 @@ export const AnimatedTyping = () => {
   }, [index, text]);
 
   return (
-    <p className="align-middle">{displayText}</p>
+    <p className="align-middle text-center">{displayText}</p>
   );
 };
