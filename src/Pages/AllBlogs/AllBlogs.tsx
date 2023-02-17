@@ -32,7 +32,7 @@ const AllBlogs: React.FC = () => {
         <div id="blog-wrapper" className="flex-col justify-center items-center w-full lg:w-5/12 md:w-2/3 sm:w-full mb-10">
 
           <div id="select-wrapper" className="flex justify-end">
-            <select className="bg-white rounded-md text-center text-sm h-8 w-1/2 shadow-xl focus:ring ring-sky-700 outline-none "
+            <select className="bg-neutral-50 rounded-md text-center text-sm h-8 w-1/2 shadow-xl focus:ring ring-sky-700 outline-none "
               onChange={e => setFilterWord(e.currentTarget.value)}>
               {CATEGORIES.map((cat: string, index: number) =>( 
                 <option key={index} value={cat}>

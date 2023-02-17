@@ -11,7 +11,7 @@ const SingleBlog: React.FC = () => {
         if (isLoading) return <p className="LoadingScreen">Loading...</p>
 
         return (
-           <div id="main-wrapper" className="mt-20 mb-10 w-9/12 mx-auto p-4 px-20 bg-white rounded-md h-full overflow-auto shadow-2xl"> 
+           <div id="main-wrapper" className="mt-20 mb-10 w-9/12 mx-auto p-4 px-20 bg-neutral-50 rounded-md h-full overflow-auto shadow-2xl"> 
                 <ReactMarkdown className='markdown'>
                     {blog!.fields.markdownContent}
                 </ReactMarkdown>
