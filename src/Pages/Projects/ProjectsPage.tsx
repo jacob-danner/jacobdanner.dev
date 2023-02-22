@@ -1,4 +1,8 @@
+import { useProjects } from "../../ContentfulUtils/useContentful"
+
+
 export const ProjectsPage: React.FC = () => {
+    useProjects()
     return (
      <div id="wrapper" className="h-full w-9/12 mx-auto mt-20 mb-10 p-4 bg-neutral-100 shadow-2xl rounded-md flex flex-col justify-center items-center">
 
