@@ -1,5 +1,4 @@
 import { AnimatedTyping } from "./AnimatedTyping"
-import { Link } from "react-router-dom"
 
 export const About = () => {
     return(
@@ -8,12 +7,9 @@ export const About = () => {
           <AnimatedTyping />
         </div>
 
-        <div id="poem" className="text-sm lg:text-lg md:text-base sm:text-sm opacity-60 font-medium">
-          <p className=" mt-10 text-center">"A senior in college,<br />With a curious mind and heart,<br />Building a bright future."</p>
-          <p className="mt-4 text-right">-ChatGPT</p>
+        <div id="about" className="text-sm lg:text-lg md:text-base sm:text-sm opacity-60 font-medium">
+          <p className=" mt-10 text-center">A hands-on software engineer passionate about AI,<br />always learning and experimenting.</p>
         </div>
-
-
       </div>
     )
 }

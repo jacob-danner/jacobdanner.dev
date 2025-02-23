@@ -13,7 +13,7 @@ export const AnimatedTyping = () => {
       } else {
         clearInterval(intervalId);
       }
-    }, 70);
+    }, 50);
     return () => clearInterval(intervalId);
   }, [index, text]);
 

@@ -9,7 +9,7 @@ export const Navbar = () => {
             <li className="hover:text-sky-700"> <Link to={"/blog"}>BLOG</Link> </li>
             <li className="hover:text-sky-700"> <Link to={"/projects"}>PROJECTS</Link></li>
             <li className="hover:text-sky-700"> <Link to={"/contact"}>CONTACT</Link> </li>
-            <li className="hover:text-sky-700"> <a href="https://drive.google.com/file/d/181Xph6HUwYbmmx3HFoFhDp-4xgv0emEQ/view?usp=sharing">RESUME</a></li>
+            <li className="hover:text-sky-700"> <a href="https://drive.google.com/file/d/1V7JGEOyl2O0XdI9DRB6EXX0cxlApDCSC/view?usp=sharing">RESUME</a></li>
           </ul>
 
           <div id="logo-wrapper" className="flex justify-center w-1/4">
