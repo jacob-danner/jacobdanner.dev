@@ -7,7 +7,7 @@ export const Navbar = () => {
 
           <ul className="text-sm flex w-full justify-around items-center h-full text-neutral-700 ">
             <li className="hover:text-sky-700"> <Link to={"/blog"}>BLOG</Link> </li>
-            <li className="hover:text-sky-700"> <Link to={"/projects"}>PROJECTS</Link></li>
+            {/* <li className="hover:text-sky-700"> <Link to={"/projects"}>PROJECTS</Link></li> */}
             <li className="hover:text-sky-700"> <Link to={"/contact"}>CONTACT</Link> </li>
             <li className="hover:text-sky-700"> <a href="https://drive.google.com/file/d/1NRFoSewUqqBEaA7HV-_4AyrDxzTzO19i/view?usp=sharing">RESUME</a></li>
           </ul>
