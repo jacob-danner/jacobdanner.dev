@@ -43,7 +43,13 @@ const AllBlogs: React.FC = () => {
           </div>
 
           {filtered!.map(el => {
-            return <BlogCard title={el.fields.title} date={el.fields.date} slug={el.fields.slug} key={el.fields.slug} />
+            return <BlogCard 
+              title={el.fields.title} 
+              date={el.fields.date} 
+              slug={el.fields.slug || ''} 
+              externalUrl={el.fields.externalUrl}
+              key={el.fields.slug || el.fields.externalUrl} 
+            />
           })}
         </div>
 

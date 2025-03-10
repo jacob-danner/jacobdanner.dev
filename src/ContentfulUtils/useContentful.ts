@@ -5,11 +5,23 @@ interface Blog {
     fields: {
         title: string
         date: string
-        slug: string
-        markdownContent: string
+        slug?: string             // external blogs won't have this
+        markdownContent?: string  // external blogs won't have this
         category: string[]
+        externalUrl?: string      // indicate if external blogs
     }
 }
+
+const EXTERNAL_BLOGS: Blog[] = [
+    {
+        fields: {
+            title: "Retrieval Augmented Classification — LLMs as Classifiers",
+            date: "2024-09-28",
+            category: ['Machine Learning', 'Natural Language'],
+            externalUrl: "https://medium.com/the-quantastic-journal/retrieval-augmented-classification-llms-as-classifiers-c28d40391738"
+        }
+    }
+];
 
 const useBlog = (slug: string): [Blog | null, boolean] => {
     const [blog, setBlog] = useState<Blog | null>(null);
@@ -34,7 +46,14 @@ const useBlogs = (): [Blog[] | null, boolean] => {
     useEffect(() => {
         (async () => {
             const items = await getBlogs();
-            setBlogs(items); // get array of blog 
+            const allBlogs = [...items, ...EXTERNAL_BLOGS];
+            
+            // Sort blogs by date in descending order (newest first)
+            const sortedBlogs = allBlogs.sort((a, b) => 
+                new Date(b.fields.date).getTime() - new Date(a.fields.date).getTime()
+            );
+            
+            setBlogs(sortedBlogs);
             setLoading(false);
         })();
     }, []);
@@ -51,7 +70,7 @@ interface Project {
 }
 
 const useProject = (slug: string): [Project | null, boolean] => {
-    const [project, setProject] = useState<Blog | null>(null);
+    const [project, setProject] = useState<Project | null>(null);
     const [isLoading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -62,8 +81,6 @@ const useProject = (slug: string): [Project | null, boolean] => {
         })();
 
     }, [slug]);
-    console.log('here')
-    console.log(project)
 
     return [project, isLoading];
 }
