@@ -25,7 +25,6 @@ export const ContactPage: React.FC = () => {
               <p>I've worked professionally as a software engineer since 2022 — building agentic RAG systems, backend solutions for multiple Fortune 500 companies, and dynamic frontend web applications.</p>
               <p>Complementing this, I've independently explored advanced ML models and neural networks through personal projects and studying white papers.</p>
               <p className='font-semibold'>I'm currently seeking remote ML/AI roles where I can apply my passion for good.</p>
-              <p>Please see my resume for more information.</p>
             </div>
 
             <hr className='mt-6' />
