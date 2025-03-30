@@ -39,6 +39,7 @@ export const ContactPage: React.FC = () => {
               <li><a href="https://github.com/jacob-danner" className='hover:text-sky-700'>GitHub</a></li>
               <li><a href="https://www.linkedin.com/in/jacob-danner/" className='hover:text-sky-700'>LinkedIn</a></li>
               <li><a href="mailto:jacob@jacobdanner.dev" className='hover:text-sky-700'>jacob@jacobdanner.dev</a></li>
+              <li><a href="https://huggingface.co/jacob-danner" className='hover:text-sky-700'>Hugging Face</a></li>
             </ul>
           </div>
         </div>
